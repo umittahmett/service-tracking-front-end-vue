@@ -1,0 +1,36 @@
+{
+  "name": "servis_takip",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "@chenfengyuan/vue-barcode": "^2.0.2",
+    "@heroicons/vue": "^2.0.18",
+    "@vue/cli": "^5.0.8",
+    "animate.css": "^4.1.1",
+    "axios": "^1.5.0",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
+    "js-cookie": "^3.0.5",
+    "jsbarcode": "^3.11.5",
+    "jspdf": "^2.5.1",
+    "pdf-lib": "^1.17.1",
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-qrcode": "^2.2.0",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.11"
+  }
+}
