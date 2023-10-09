@@ -43,7 +43,7 @@
 import BackButton from "../components/Common/BackButton.vue";
 import Steps from "../components/Common/Steps.vue";
 import Button from "../components/Common/Button.vue";
-import { createWizardStore } from "../stores/AddProduct";
+import { createWizardStore } from "../stores/addproduct";
 import Title from "../components/Common/Title.vue";
 import Caption from "../components/Common/Caption.vue";
 export default {
