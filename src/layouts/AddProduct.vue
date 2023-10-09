@@ -99,10 +99,10 @@ export default {
       });
     },
   },
-  mounted() {},
   beforeRouteEnter(to, from, next) {
+    const store = createWizardStore();
     next((vm) => {
-      this.store = createWizardStore();
+      vm.store = store;
     });
   },
 };
