@@ -47,7 +47,7 @@
         />
         <Button>
           <router-link
-            :href="
+            :to="
               barcodeId && !isNaN(barcodeId) ? `/overview/${barcodeId}` : '#'
             "
             >Sorgula
