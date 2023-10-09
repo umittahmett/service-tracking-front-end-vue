@@ -1,17 +1,17 @@
 <template>
-  <div class="w-full px-4 pt-1 mb-20">
+  <div v-if="store" class="w-full px-4 pt-1 mb-20">
     <div class="w-full row-span-1 mx-auto max-w-7xl">
       <div class="flex items-end justify-between mt-8">
         <div>
           <Title :titleType="'3xl'">Yeni Ürün Ekle</Title>
           <div class="flex items-center gap-x-2 justify-start mt-6">
             <BackButton :buttonType="'sky'" :link="'/'" />
-            <Caption class="!text-2xl" :type="'black'" v-if="store"
+            <Caption class="!text-2xl" :type="'black'"
               >{{ store.currnetStepCaption }}
             </Caption>
           </div>
         </div>
-        <Steps v-if="store" :steps="steps" />
+        <Steps :steps="steps" />
       </div>
     </div>
     <div
@@ -24,7 +24,7 @@
 
         <!-- Next Button -->
         <Button
-          v-if="store && !store.isAlljourneyDone"
+          v-if="!store.isAlljourneyDone"
           :text="this.store.stepNumber === 2 ? 'Tammamla' : 'Sonraki Adıma Geç'"
           :roundSize="5"
           :disabled="!store.isCurrentStepCompleted"

@@ -264,6 +264,7 @@ export default {
               throw new Error("Network response was not ok");
             } else if (response.status === 204) {
               this.message = "Ürün Bulunamadı";
+              console.log("Urun bulunamadi");
             }
             return response.json();
           })
