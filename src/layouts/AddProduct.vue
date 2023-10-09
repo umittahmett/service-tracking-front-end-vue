@@ -99,11 +99,8 @@ export default {
       });
     },
   },
-  beforeRouteEnter(to, from, next) {
-    const store = createWizardStore();
-    next((vm) => {
-      vm.store = store;
-    });
+  mounted() {
+    this.store = createWizardStore();
   },
 };
 </script>

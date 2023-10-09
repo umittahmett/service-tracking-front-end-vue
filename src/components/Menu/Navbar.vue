@@ -46,12 +46,12 @@
           }"
         />
         <Button>
-          <a
+          <router-link
             :href="
               barcodeId && !isNaN(barcodeId) ? `/overview/${barcodeId}` : '#'
             "
-            >Sorgula</a
-          >
+            >Sorgula
+          </router-link>
         </Button>
       </div>
 
@@ -78,6 +78,7 @@
 import { LockClosedIcon, XMarkIcon } from "@heroicons/vue/20/solid";
 import Button from "../Common/Button.vue";
 import "animate.css";
+import { RouterLink } from "vue-router";
 
 export default {
   data() {
@@ -95,6 +96,7 @@ export default {
     Button,
     LockClosedIcon,
     XMarkIcon,
+    RouterLink,
   },
 };
 </script>
