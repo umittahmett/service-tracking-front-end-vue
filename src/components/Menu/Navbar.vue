@@ -4,12 +4,12 @@
   >
     <a href="/" className="font-bold text-4xl  p-2 text-white">Bilgi İşlem</a>
     <div className=" justify-center items-center gap-x-6 hidden lg:flex">
-      <a v-for="page in pages" :key="page.name" :href="page.href">
+      <router-link v-for="page in pages" :key="page.name" :to="page.href">
         <span
           class="cursor-pointer text-gray-200 text-sm hover:text-white hover:border-b transition-text"
           >{{ page.name }}
         </span>
-      </a>
+      </router-link>
     </div>
     <Button class="hidden lg:block" :text="'Login'" />
     <button @click="menuToggle = true" class="w-7 lg:hidden">
