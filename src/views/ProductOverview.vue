@@ -240,7 +240,7 @@ export default {
     XCircleIcon,
   },
 
-  beforeRouteEnter(to, from, next) {
+  mounted() {
     this.store = createWizardStore();
     this.product = this.store.currentProduct;
 
@@ -248,37 +248,36 @@ export default {
     const lastSlashIndex = currentUrl.lastIndexOf("/");
     const numberAfterLastSlash = currentUrl.slice(lastSlashIndex + 1);
     const number = numberAfterLastSlash;
-    next((vm) => {
-      if (!isNaN(number)) {
-        console.log("URL'deki sayı:", number);
-        if (!vm.store.currentProduct.serial_number) {
-          fetch("http://localhost:5002/products", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ serial_number: number }),
+    // Sayıyı kontrol edin
+    if (!isNaN(number)) {
+      console.log("URL'deki sayı:", number);
+      if (!this.store.currentProduct.serial_number) {
+        fetch("http://localhost:5002/products", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ serial_number: number }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            } else if (response.status === 204) {
+              this.message = "Ürün Bulunamadı";
+            }
+            return response.json();
           })
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok");
-              } else if (response.status === 204) {
-                vm.message = "Ürün Bulunamadı";
-              }
-              return response.json();
-            })
-            .then((data) => {
-              vm.store.currentProduct = data.products[0];
-              console.log(data.products[0]);
-            })
-            .catch((error) => {
-              console.error("Fetch error:", error);
-            });
-        }
-      } else {
-        console.log("URL'deki sayı bulunamadı.");
+          .then((data) => {
+            this.store.currentProduct = data.products[0];
+            console.log(data.products[0]);
+          })
+          .catch((error) => {
+            console.error("Fetch error:", error);
+          });
       }
-    });
+    } else {
+      console.log("URL'deki sayı bulunamadı.");
+    }
   },
 
   methods: {
