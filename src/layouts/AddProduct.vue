@@ -25,10 +25,10 @@
         <!-- Next Button -->
         <Button
           v-if="!store.isAlljourneyDone"
-          :text="this.store.stepNumber === 2 ? 'Tammamla' : 'Sonraki Adıma Geç'"
+          :text="store.stepNumber === 2 ? 'Tammamla' : 'Sonraki Adıma Geç'"
           :roundSize="5"
           :disabled="!store.isCurrentStepCompleted"
-          @click="this.store.stepNumber === 2 ? store.sendData() : nextStep()"
+          @click="store.stepNumber === 2 ? store.sendData() : nextStep()"
         >
           <ArrowRightIcon class="w-6" />
         </Button>
