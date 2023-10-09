@@ -52,7 +52,7 @@
           <div class="pr-3 flex items-end justify-between w-full">
             <vue-qrcode
               class="w-16 border rounded-md mt-3"
-              :value="`http://localhost:5173/overview/${store.productId}`"
+              :value="`https://servis-takip-front-end.vercel.app/overview/${store.productId}`"
               :size="200"
             ></vue-qrcode>
 
