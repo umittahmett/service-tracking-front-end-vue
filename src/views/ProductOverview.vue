@@ -251,7 +251,7 @@ export default {
     // Sayıyı kontrol edin
     if (!isNaN(number)) {
       console.log("URL'deki sayı:", number);
-      if (!this.store.currentProduct.serial_number) {
+      if (!this.store.currentProduct) {
         fetch("http://localhost:5002/products", {
           method: "POST",
           headers: {
