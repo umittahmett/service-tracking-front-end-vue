@@ -33,16 +33,16 @@
 import Button from "../Common/Button.vue";
 import Caption from "./Caption.vue";
 import Title from "./Title.vue";
-import KasaImage from "@/images/Kasa.png"; // Doğrudan import edilebilen bir yol
-import MonitorImage from "@/images/Monitor.png"; // Doğrudan import edilebilen bir yol
-import LaptopImage from "@/images/laptop.png"; // Doğrudan import edilebilen bir yol
-import YaziciImage from "@/images/Yazici.png"; // Doğrudan import edilebilen bir yol
-import NoImgage from "@/images/no-image.png"; // Doğrudan import edilebilen bir yol
-import InProgress from "@/images/1.png"; // Doğrudan import edilebilen bir yol
-import Completed from "@/images/3.png"; // Doğrudan import edilebilen bir yol
-import Failed from "@/images/2.png"; // Doğrudan import edilebilen bir yol
-import While from "@/images/while.png"; // Doğrudan import edilebilen bir yol
-import Electric from "@/images/electric.png"; // Doğrudan import edilebilen bir yol
+import KasaImage from "/Kasa.png"; // Doğrudan import edilebilen bir yol
+import MonitorImage from "/Monitor.png"; // Doğrudan import edilebilen bir yol
+import LaptopImage from "/laptop.png"; // Doğrudan import edilebilen bir yol
+import YaziciImage from "/Yazici.png"; // Doğrudan import edilebilen bir yol
+import NoImgage from "/no-image.png"; // Doğrudan import edilebilen bir yol
+import InProgress from "/sit1.png"; // Doğrudan import edilebilen bir yol
+import Completed from "/sit3.png"; // Doğrudan import edilebilen bir yol
+import Failed from "/sit2.png"; // Doğrudan import edilebilen bir yol
+import While from "/while.png"; // Doğrudan import edilebilen bir yol
+import Electric from "/electric.png"; // Doğrudan import edilebilen bir yol
 import { stringifyQuery } from "vue-router";
 
 export default {

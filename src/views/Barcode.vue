@@ -31,7 +31,6 @@ export default {
   data() {
     return {
       QRCodeText: "lorem.com", // QR kod içeriği olarak kullanılacak URL
-
       WebsiteURL: "https://example.com", // Yönlendirilecek web sitesi URL'sini burada belirtin
       BarcodeText: "https://example.com", // Metin eklemek için kullanılacak veri
       barcodeOptions: {

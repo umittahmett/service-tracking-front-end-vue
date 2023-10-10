@@ -13,7 +13,7 @@
     </div>
     <Button class="hidden lg:block" :text="'Login'" />
     <button @click="menuToggle = true" class="w-7 lg:hidden">
-      <img src="@/images/bars.png" alt="" />
+      <img src="/bars.png" alt="" />
     </button>
 
     <!-- Mobile Menu -->

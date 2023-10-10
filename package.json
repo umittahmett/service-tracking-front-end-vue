@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "serve": "vue-cli-service serve"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@chenfengyuan/vue-barcode": "^2.0.2",
